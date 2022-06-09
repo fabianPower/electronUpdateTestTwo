@@ -1,0 +1,4 @@
+node_modules
+compiled-win32-x64/compiled.exe
+electron-builder.yml
+dist
