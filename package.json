@@ -11,14 +11,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fabianPower/electronUpdateTest.git"
+    "url": "https://github.com/fabianPower/electronUpdateTestTwo.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fabianPower/electronUpdateTest/issues"
+    "url": "https://github.com/fabianPower/electronUpdateTestTwo/issues"
   },
-  "homepage": "https://github.com/fabianPower/electronUpdateTest#readme",
   "devDependencies": {
     "electron": "^19.0.4"
   },
