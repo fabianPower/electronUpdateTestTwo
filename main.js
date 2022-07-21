@@ -1,6 +1,17 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const { autoUpdater } = require('electron-updater');
 
+autoUpdater.setFeedURL('https://github.com/fabianPower/electronUpdateTestTwo.git')
+autoUpdater.checkForUpdates()
+
+var nodeConsole = require('console');
+var myConsole = new nodeConsole.Console(process.stdout, process.stderr);
+myConsole.log('Hello World!');
+
+setInterval(() => {
+  autoUpdater.checkForUpdatesAndNotify()
+}, 1000)
+
 let mainWindow;
 
 function createWindow () {
@@ -17,7 +28,9 @@ function createWindow () {
     mainWindow = null;
   });
   mainWindow.once('ready-to-show', () => {
-    autoUpdater.checkForUpdatesAndNotify();
+    autoUpdater.checkForUpdates();
+    // autoUpdater.checkForUpdatesAndNotify();
+    console.log("checking for updates")
   });
 }
 
@@ -42,12 +55,15 @@ ipcMain.on('app_version', (event) => {
 });
 
 autoUpdater.on('update-available', () => {
+  console.log("update available")
   mainWindow.webContents.send('update_available');
 });
 autoUpdater.on('update-downloaded', () => {
+  console.log("update downloaded")
   mainWindow.webContents.send('update_downloaded');
 });
 
 ipcMain.on('restart_app', () => {
+  console.log("quit and install")
   autoUpdater.quitAndInstall();
 });
