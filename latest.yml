@@ -1,0 +1,8 @@
+version: 1.0.22
+files:
+  - url: electronupdatetest-Setup-1.0.22.exe
+    sha512: g5ixQQXHSFbw5aaZW3HPwKDvxctVAi4Qvi0PaIZ4zCs708zxPmK32wjVuJvmtqggy2HAtgrm9WFhS8JfnPcOTA==
+    size: 63162266
+path: electronupdatetest-Setup-1.0.22.exe
+sha512: g5ixQQXHSFbw5aaZW3HPwKDvxctVAi4Qvi0PaIZ4zCs708zxPmK32wjVuJvmtqggy2HAtgrm9WFhS8JfnPcOTA==
+releaseDate: '2022-07-21T07:59:23.999Z'
